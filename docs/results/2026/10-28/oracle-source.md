@@ -77,6 +77,18 @@ browser, database, migration, Auth change, CI, live-data import, model call,
 account, paid plan or Vercel setup was used. Small source/static work did not
 require a dependency environment or storage-budget exception.
 
+## Source publication
+
+Published [976e2f1b234822604b1203e54a365e210f025326](https://github.com/alvarovillalbaa/la-porra/commit/976e2f1b234822604b1203e54a365e210f025326)
+to the existing personal `alvarovillalbaa/la-porra` repository. Immutable connected
+GitHub reads matched all nine changed local Git blobs. The canonical module is
+`32a3f01d22fab6eedb30487ba65ceb46d268e389`; its authored cases are
+`54eee9ededde7fb540e17d0897b0ce565f77e712` and abstract fixture helper
+`0a72b9554899b4154260847c08ef8dd9d1353933`. The 119-case proposal was read back
+as `5fdb90d59ae5b3dcee1fab20f730c0db499d0f4c`. This receipt-only follow-up
+preserves every source/test byte. Publication does not establish test execution,
+an active rulebook, shared persistence or a hosted application.
+
 ## Remaining application work
 
 The source remains draft-only. Real group membership/invitations, accounts,
