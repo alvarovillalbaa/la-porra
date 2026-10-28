@@ -1,5 +1,7 @@
 # Ownership and proposed data contract
 
+Last updated: 2026-10-28
+
 Current implementation is pure domain source. The following shared-service
 contract is proposed; no tables, migrations, Auth policy or endpoint is applied.
 
@@ -32,6 +34,15 @@ half-point total and shared competition rank. Equal points share rank; ID order
 only stabilizes display. The caller must exclude hidden/unsettled records and
 authorize group membership before returning rows. Ranking source alone does not
 establish privacy.
+
+`resolveOracleOutcomes` and `scoreOraclePrediction` implement the draft
+[Oráculo record contract](references/oracle-contract.md). They validate supplied
+draw/roster snapshots, official result revisions and recorded picks, resolve all
+ten categories and return exact revision-bound half-point totals. Missing
+results/policies remain explicit; no final total is returned while any category
+is unsettled. These pure functions do not verify FIFA facts, persist a revision,
+enforce its deadline, authorize a user or reveal its content safely. The service
+must still own those boundaries and replacement of derived scores after correction.
 
 ## Proposed PostgreSQL records
 

@@ -1,5 +1,7 @@
 # Product contract and delivery coverage
 
+Last updated: 2026-10-28
+
 Source: [La porra in Notion](https://app.notion.com/p/377a1ee8bd068023a883c8c6bf2434a1),
 fetched and read in full on 28 October 2026. The connector returns a snapshot
 dated 14 June 2026, with the rules labelled research/proposals. This is the
@@ -41,10 +43,10 @@ requires both reveal times explicitly and has no implicit visibility default.
 | Qualification bonuses +3, final +5; never multiplied | Draft source and authored, unexecuted cases |
 | Third-place bonus | Requires explicit `winner` or `none`; source says qualified although nobody advances |
 | Oráculo before first match | Explicit deadline contract; midnight-local versus opening-minus-60-minutes decision remains |
-| Champion20, runner-up12, semifinalists1each, scorer15, MVP12, goalkeeper10, young-player8 | Preserve categories/weights; picks, official award resolutions and scoring remain to implement |
-| Cinderella10 | Cohort, round/points/GD/goals/ranking snapshots and tied-winner resolution remain |
-| Pufo | Fixed10 versus stage10/7/5/3 remains unresolved; preserve both as versioned policy choices |
-| Worst goal difference8 / worst group team | Whole tournament versus group-only scope and category identity remain unresolved |
+| Champion20, runner-up12, semifinalists1each, scorer15, MVP12, goalkeeper10, young-player8 | Draft pure Oráculo records/settlement/scoring source prepared; official records, submission and service integration remain |
+| Cinderella10 | Pot-four snapshot, full stage/points/GD/goals/pre-tournament-rank ordering and explicit tied-winner policy in draft source; authoritative snapshots and policy activation remain |
+| Pufo | Draft source requires explicit fixed10 or stage10/7/5/3 policy and same-stage/tie treatment; owner selection and activation remain unresolved |
+| Worst goal difference8 / worst group team | Draft source supports explicit whole-tournament or group-only GD scope with preserved ties; scope choice and category identity remain unresolved |
 | Overall, matchday, group-stage, knockout and Oráculo rankings | Pure total ranking source only; aggregation, filters, correction/reveal gates and UI remain |
 | Equal-point ranks | Current source shares competition rank; it does not award an extra competitive tie-break |
 | Streaks, exact hits, worst day and weekly comeback | Day/week boundaries and simultaneous-match ordering need explicit policy; implementation remains |
@@ -68,6 +70,10 @@ reference an immutable active ruleset with its unresolved policies filled in.
 The scorer evaluates recorded score and qualifier picks separately; whether a
 decisive predicted score must agree with the qualifier is a submission-policy
 decision, not silently enforced by this draft scorer.
+
+The separate `research-2026-oracle-v1` [Oráculo engine contract](references/oracle-contract.md)
+keeps missing results and missing policy choices unsettled. Supplying one of its
+draft interpretations to a pure function does not approve an active rulebook.
 
 Completion requires the full app contract, real shared persistence, server-side
 time/visibility enforcement, published source and hosted behavior. Syntax or

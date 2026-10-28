@@ -1,5 +1,7 @@
 # La Porra
 
+Last updated: 2026-10-28
+
 Pronósticos entre amigos, con puntos. Match scores, knockout picks, a tournament
 Oráculo and private group rankings.
 
@@ -20,6 +22,9 @@ trading and cash-out are excluded. Its 2026 rules remain a draft version.
   hidden during the minute between cutoff and kickoff. Oráculo picks and its
   ranking have separate reveal times.
 - `src/ranking.mjs`: settled group totals with shared ranks for equal points.
+- `src/oracle.mjs`: all ten draft Oráculo categories, snapshot/cohort validation,
+  official-resolution inputs, explicit ambiguous policies, partial settlement
+  and revision-bound scoring. See the [record contract](docs/references/oracle-contract.md).
 - `tests/`: authored domain cases, awaiting execution approval.
 - [Architecture](docs/architecture.md): server ownership, storage and audit
   contract still to implement.
@@ -38,4 +43,6 @@ and PostgreSQL/Supabase provisioning follow the application and access contract;
 no plan change or domain purchase is part of this source foundation.
 
 The latest evidence belongs in [the foundation receipt](docs/results/2026/10-28/foundation.md).
+The [Oráculo implementation receipt](docs/results/2026/10-28/oracle-source.md)
+records the subsequent source work and its unexecuted domain-check boundary.
 MIT licensed.
