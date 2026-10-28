@@ -3,6 +3,8 @@
 Pronósticos entre amigos, con puntos. Match scores, knockout picks, a tournament
 Oráculo and private group rankings.
 
+[Personal GitHub source](https://github.com/alvarovillalbaa/la-porra)
+
 **Initial domain foundation.** The application, shared persistence, account
 access, tournament data and hosted acceptance remain unfinished. The owning
 [product contract](docs/spec.md) preserves that scope and the pending decisions.

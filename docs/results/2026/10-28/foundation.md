@@ -44,8 +44,9 @@ Independent review re-read the bronze-policy repair and corrected result
 fixtures and found no remaining source blocker. All 17 initial text files passed
 newline/whitespace checks; eight local documentation targets resolve. These
 checks do not establish runtime behavior. The dedicated personal GitHub repository
-was created under the existing publication authorization; source readback will
-follow the initial push.
+was created under the existing publication authorization. The repository connector
+lacks creation capability; the authenticated GitHub CLI created it, and connected
+GitHub readback verified the public owner/name and source below.
 
 Checked SHA256 values:
 
@@ -62,3 +63,22 @@ No install, local build, server, browser, database, migration, CI,
 model call, account, paid plan, domain purchase or real fixture import ran.
 The public FIFA fixtures page returned no readable content through the web
 tool; no source-only scoring fixture is claimed as current official data.
+
+## Source publication
+
+The public repository is [`alvarovillalbaa/la-porra`](https://github.com/alvarovillalbaa/la-porra),
+repository ID `1436462592`. Initial source
+[`4c65ea2ee73857b08bf4b0c8a7f1db045c8991a8`](https://github.com/alvarovillalbaa/la-porra/commit/4c65ea2ee73857b08bf4b0c8a7f1db045c8991a8)
+was pushed to main. Immutable connected reads match the local blobs:
+
+- Scoring: `0d05853a2e04c17c8b30a0266e10af0a73f233b4`.
+- Windows: `d30c6ece41c5baf8b66bc808cdd4103be76e7d65`.
+- Ranking: `7a7af2d2aceb74e6651fe72c7e6f15cee4025bb8`.
+- Core-check proposal: `c4668bd25a08bcbd2659b0e5bb2a3474f28d6a49`.
+
+Remote main matched the initial source exactly. The documentation-only follow-up
+does not change the reviewed modules or authored tests. A focused local core-test
+approval question was presented against the published proposal; it remains
+pending. Tournament choice and the owner's Oráculo preference remain pending.
+No active workflow, Vercel project or database was created. Application and live
+backend/hosted verification remain required under the full product contract.
