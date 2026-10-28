@@ -29,14 +29,14 @@ requires both reveal times explicitly and has no implicit visibility default.
 
 | Requirement from the brief | Current evidence / remaining work |
 | --- | --- |
-| Friends' groups and private memberships | Data/access contract only; creation, joining, invitations and UI remain to implement |
-| Predict exact score; derive sign and goal difference | Draft pure scoring source; submission/edit UI and server persistence remain |
+| Friends' groups and private memberships | Browser creation/join/invite/roster views and producer contract authored; verified accounts, private endpoints and storage remain |
+| Predict exact score; derive sign and goal difference | Draft pure scoring plus submission/edit UI source; shared persistence and browser acceptance remain |
 | Separate knockout qualifier, including shootouts | Draft independent bonus scoring; canonical result ingestion and accepted-pick consistency policy remain |
 | Group score uses 90 minutes plus stoppage; knockouts use the score after extra time when played | Result contract only; no provider adapter or real result has been imported |
 | Penalty kicks excluded from the score | Explicit result contract; qualifier is a separate field |
 | Edit until one minute before kickoff | Snapshot/window source; authoritative server-time enforcement remains |
 | Hide picks until kickoff | Separate reveal predicate; private queries/RLS and browser acceptance remain |
-| Revision history visible after the match, last edit timestamp | Append-only revision contract; database/API/UI remain |
+| Revision history visible after the match, last edit timestamp | Gated browser history view and revision DTOs authored; database/API enforcement remain |
 | Freeze closure across data outages/schedule changes | Stored cutoff and closure-latch predicate; transactional persistence remains |
 | Score precedence 5/3/2/1/0 | Draft source; 46 approved match-scoring cases passed across precedence, factors, bonuses and policies |
 | Round factors ×1, ×1.5, ×2, ×3 | Half-point integer scoring source; no rounded quarterfinal totals |
@@ -47,7 +47,7 @@ requires both reveal times explicitly and has no implicit visibility default.
 | Cinderella10 | Pot-four snapshot, full stage/points/GD/goals/pre-tournament-rank ordering and explicit tied-winner policy in draft source; authoritative snapshots and policy activation remain |
 | Pufo | Draft source requires explicit fixed10 or stage10/7/5/3 policy and same-stage/tie treatment; owner selection and activation remain unresolved |
 | Worst goal difference8 / worst group team | Draft source supports explicit whole-tournament or group-only GD scope with preserved ties; scope choice and category identity remain unresolved |
-| Overall, matchday, group-stage, knockout and Oráculo rankings | Pure total ranking source only; aggregation, filters, correction/reveal gates and UI remain |
+| Overall, matchday, group-stage, knockout and Oráculo rankings | Pure ranking source and server-owned filter/table UI authored; aggregation, correction/reveal enforcement and runtime acceptance remain |
 | Equal-point ranks | Current source shares competition rank; it does not award an extra competitive tie-break |
 | Streaks, exact hits, worst day and weekly comeback | Day/week boundaries and simultaneous-match ordering need explicit policy; implementation remains |
 | Brujo(3 exact in a row), Gafe(5 misses in a row) | Thresholds retained; ordered-event/badge implementation remains |
@@ -55,7 +55,7 @@ requires both reveal times explicitly and has no implicit visibility default.
 | FIFA as official result source | Provenance/version contract only; official data access, licensing and result ingestion remain |
 | Administrative edits require an audit log | Append-only correction contract; privileged endpoints and database enforcement remain |
 | Dedicated personal GitHub repository | Source publication receipt records actual remote evidence |
-| Working application on Vercel and necessary shared database | Application, provisioning and full-path verification remain unfinished |
+| Working application on Vercel and necessary shared database | Browser client source authored; backend, provisioning, deployment and full-path verification remain unfinished |
 
 Optional advanced markets from the source (group winners/qualifiers, total goals,
 highest-scoring team/match, clean sheets and exact final) remain optional backlog.
@@ -77,6 +77,12 @@ draft interpretations to a pure function does not approve an active rulebook.
 The [approved 119-case domain run](results/2026/10-28/oracle-source.md) supplies
 bounded runtime evidence; it does not activate these policies or establish the
 remaining application/service requirements.
+
+The [application source receipt](results/2026/10-28/application-source.md)
+records the subsequent browser client. Its 38 new authored API/controller cases
+are unrun, and no browser/server/database execution is implied. The proposed
+[first group-service slice](proposals/group-service.md) does not activate a
+tournament, a ruleset, Auth or schema changes.
 
 Completion requires the full app contract, real shared persistence, server-side
 time/visibility enforcement, published source and hosted behavior. Syntax or

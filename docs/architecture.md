@@ -2,8 +2,31 @@
 
 Last updated: 2026-10-28
 
-Current implementation is pure domain source. The following shared-service
-contract is proposed; no tables, migrations, Auth policy or endpoint is applied.
+Current implementation includes pure domain source and the dependency-free
+browser client in `public/`. The following shared-service contract remains
+proposed; no tables, migrations, Auth policy or endpoint is applied.
+
+## Browser and producer boundary
+
+The [application API contract](references/application-api.md) owns the proposed
+same-origin producer DTOs. The client validates finite JSON and binds private
+responses to the captured verified viewer, group, full tournament context and
+current resource generation. It does not interpret a browser calculation or a
+disabled control as authorization. The server must enforce every permission.
+
+Unsent drafts are memory-only and scoped by group/tournament/ruleset/mode.
+Uncertain retries retain the same mutation UUID and payload; changed intent
+receives a new UUID. A confirmed earlier save cannot delete a newer draft.
+Revision conflicts retain the old base until the user compares current saved
+values, explicitly accepts that base and separately saves. Nothing is persisted
+optimistically. Session replacement clears private state and rendered views.
+
+Group invitation codes are retained only from this session's creation receipts
+and shown only while current listing/permission allows them. They never enter
+URLs, browser storage or draft exports. Score/Oráculo draft export is manual.
+The browser displays server-supplied timing, ranks, half-point totals, visibility
+and qualifier labels; it does not choose tournament policies or hide data that
+the producer already leaked. Source/static review is not runtime or access proof.
 
 ## Canonical domain
 
@@ -77,8 +100,9 @@ silently share sign-in merely to make room for this project.
   URLs or trust client-reported results, roles, points or server time.
 - Audit administrative corrections and closed-prediction amendments. Preserve
   prior versions and recompute affected rankings without duplicate points.
-- Build Spanish empty/loading/error/mobile/keyboard views, accessible forms,
-  group/member flows, rule explanations and the complete three-surface product.
+- Connect the authored Spanish group/member, prediction, Oráculo, ranking and
+  rules views to the real producer. Verify empty/loading/error/mobile/keyboard
+  behavior in a browser after approval; those checks have not run.
 - Verify source, real database/access behavior, live APIs and hosted UI at their
   actual scope before claiming acceptance.
 
