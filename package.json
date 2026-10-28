@@ -1,0 +1,12 @@
+{
+  "name": "la-porra",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Draft domain foundation for a points-only friends' football prediction app.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test:core": "node --test tests/*.test.mjs"
+  }
+}
