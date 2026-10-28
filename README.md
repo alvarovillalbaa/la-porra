@@ -40,9 +40,10 @@ trading and cash-out are excluded. Its 2026 rules remain a draft version.
 - `tests/*.test.mjs`: 119 approved local domain checks passed against the published source;
   the [machine-readable result](docs/results/2026/10-28/domain-checks.json) records
   exact source hashes and totals.
-- `tests/unit/`: 38 new API/controller cases authored but **not executed**.
-  Their [focused check proposal](docs/proposals/application-checks.md) is separate
-  from the closed domain run; no browser or database proof is claimed.
+- `tests/unit/`: all **38 API/controller cases passed** on Node 24.21.0 under
+  their separately approved [focused scope](docs/proposals/application-checks.md).
+  The [machine receipt](docs/results/2026/10-28/application-checks.json) records
+  the exact source and output hashes. No browser or database proof is claimed.
 - [Architecture](docs/architecture.md): server ownership, storage and audit
   contract still to implement.
 

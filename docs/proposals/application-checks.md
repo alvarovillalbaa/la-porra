@@ -2,9 +2,14 @@
 
 Last updated: 2026-10-28
 
-Status: **38 authored cases; execution approval pending.** This proposal does
-not record a passing run. The earlier [119 approved domain checks](core-checks.md)
-are a separate scope and do not approve these new checks under AGENTS.md §7.
+Status: **approved and executed: all 38 passed.** Alvaro approved this published
+two-file scope, and one local Node 24.21.0 run completed against source
+`7516c13c030f12e027f5b5844ffdba95a13afee2`, with no failures, cancellations,
+skips, TODOs or retries. The [machine receipt](../results/2026/10-28/application-checks.json)
+and [raw TAP output](../results/2026/10-28/application-checks.tap) retain the exact
+source hashes, command, runtime and totals. The proposal below preserves the
+approved boundary; the earlier [119 domain checks](core-checks.md) remain a
+separate closed scope.
 
 ## Exact action proposed
 

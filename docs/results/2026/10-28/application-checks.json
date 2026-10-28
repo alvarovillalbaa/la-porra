@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "la-porra-application-checks-v1",
+  "sourceCommit": "7516c13c030f12e027f5b5844ffdba95a13afee2",
+  "approval": "Alvaro approved the published 38-case two-file scope",
+  "startedAt": "2026-10-28T18:01:15.452Z",
+  "finishedAt": "2026-10-28T18:01:15.705Z",
+  "nodeVersion": "v24.21.0",
+  "runnerArguments": [
+    "--test",
+    "--test-concurrency=1",
+    "--test-reporter=tap",
+    "tests/unit/application-api.test.mjs",
+    "tests/unit/application-state.test.mjs"
+  ],
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "totals": {
+    "tests": 38,
+    "suites": 0,
+    "pass": 38,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "sourceHashes": {
+    "public/src/api.mjs": "56964f4a6cbd15cddc746979af32598fb7bd22fe5c3fdc72a8d1c6f64fcc2f2b",
+    "public/src/protocol.mjs": "165348170046682b4b834b22ddbd59002475a7544c0bf9131ab9340e99c2062f",
+    "public/src/workspace.mjs": "d17bf0c93d03157080ef054509ba6675b2bb2a015c1a50750430c9b76e9c376a",
+    "tests/unit/application-api.test.mjs": "8c13dc922d44db3d5bf76360978ffe5f93d2cee46cfb73ba6daf7180dad65d3f",
+    "tests/unit/application-state.test.mjs": "ad59ffc6addfb032318689849081b2fa76ecd386054cf7598bd82d9f96ccb2e0"
+  },
+  "stdout": {
+    "path": "application-checks.tap",
+    "bytes": 9236,
+    "sha256": "25457b1ae14bed6e35e372364785526f4a62f39e96814f7556405303cc574d1d"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "data": "Authored API/controller fixtures only; no browser, server, database, real account, provider, model call, installation or CI"
+}

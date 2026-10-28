@@ -79,8 +79,8 @@ bounded runtime evidence; it does not activate these policies or establish the
 remaining application/service requirements.
 
 The [application source receipt](results/2026/10-28/application-source.md)
-records the subsequent browser client. Its 38 new authored API/controller cases
-are unrun, and no browser/server/database execution is implied. The proposed
+records the subsequent browser client. Its separately approved 38 API/controller
+cases passed; no browser/server/database execution is implied. The proposed
 [first group-service slice](proposals/group-service.md) does not activate a
 tournament, a ruleset, Auth or schema changes.
 

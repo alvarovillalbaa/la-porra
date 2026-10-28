@@ -1,0 +1,238 @@
+TAP version 13
+# Subtest: session reads return the entire validated envelope with same-origin transport flags
+ok 1 - session reads return the entire validated envelope with same-origin transport flags
+  ---
+  duration_ms: 39.104333
+  type: 'test'
+  ...
+# Subtest: session identity and login-path discriminants never fabricate a member
+ok 2 - session identity and login-path discriminants never fabricate a member
+  ---
+  duration_ms: 1.903625
+  type: 'test'
+  ...
+# Subtest: groups require every explicit permission and reject coercion or private anonymous envelopes
+ok 3 - groups require every explicit permission and reject coercion or private anonymous envelopes
+  ---
+  duration_ms: 1.898792
+  type: 'test'
+  ...
+# Subtest: group reads enforce requested scope and keep invitation codes out of listings
+ok 4 - group reads enforce requested scope and keep invitation codes out of listings
+  ---
+  duration_ms: 1.337167
+  type: 'test'
+  ...
+# Subtest: tournament context stays explicit and cannot cross groups or default a missing tournament
+ok 5 - tournament context stays explicit and cannot cross groups or default a missing tournament
+  ---
+  duration_ms: 0.483375
+  type: 'test'
+  ...
+# Subtest: match visibility rejects leaked hidden picks and visible-null producer fallbacks
+ok 6 - match visibility rejects leaked hidden picks and visible-null producer fallbacks
+  ---
+  duration_ms: 0.587291
+  type: 'test'
+  ...
+# Subtest: match predictions validate bounded goals and qualifier team identity without scoring
+ok 7 - match predictions validate bounded goals and qualifier team identity without scoring
+  ---
+  duration_ms: 1.048083
+  type: 'test'
+  ...
+# Subtest: history requires its current match and enforces scope, hidden emptiness and qualifier options
+ok 8 - history requires its current match and enforces scope, hidden emptiness and qualifier options
+  ---
+  duration_ms: 0.784958
+  type: 'test'
+  ...
+# Subtest: Oráculo reads retain incomplete own choices but validate all ten categories and option identities
+ok 9 - Oráculo reads retain incomplete own choices but validate all ten categories and option identities
+  ---
+  duration_ms: 1.598125
+  type: 'test'
+  ...
+# Subtest: Oráculo pick and ranking visibility are independent and hidden picks cannot leak
+ok 10 - Oráculo pick and ranking visibility are independent and hidden picks cannot leak
+  ---
+  duration_ms: 0.518959
+  type: 'test'
+  ...
+# Subtest: rankings enforce the requested filter and hide rows without recomputing supplied ties
+ok 11 - rankings enforce the requested filter and hide rows without recomputing supplied ties
+  ---
+  duration_ms: 1.056708
+  type: 'test'
+  ...
+# Subtest: mutations need an explicitly remembered valid CSRF token before any fetch
+ok 12 - mutations need an explicitly remembered valid CSRF token before any fetch
+  ---
+  duration_ms: 3.96325
+  type: 'test'
+  ...
+# Subtest: all mutation routes preserve method, identity, CSRF and full replay envelopes
+ok 13 - all mutation routes preserve method, identity, CSRF and full replay envelopes
+  ---
+  duration_ms: 1.117125
+  type: 'test'
+  ...
+# Subtest: mutation serializers reject spoofed ownership, invalid UUIDs and numeric coercion
+ok 14 - mutation serializers reject spoofed ownership, invalid UUIDs and numeric coercion
+  ---
+  duration_ms: 0.17
+  type: 'test'
+  ...
+# Subtest: prediction saves validate their supplied match without deciding its permission or local deadline
+ok 15 - prediction saves validate their supplied match without deciding its permission or local deadline
+  ---
+  duration_ms: 0.30525
+  type: 'test'
+  ...
+# Subtest: Oráculo submissions require every category and the producer option/cardinality bounds
+ok 16 - Oráculo submissions require every category and the producer option/cardinality bounds
+  ---
+  duration_ms: 0.806
+  type: 'test'
+  ...
+# Subtest: prediction acknowledgements must match the detached submitted intent
+ok 17 - prediction acknowledgements must match the detached submitted intent
+  ---
+  duration_ms: 0.2965
+  type: 'test'
+  ...
+# Subtest: successful DTOs are detached and frozen rather than retaining mutable producer resources
+ok 18 - successful DTOs are detached and frozen rather than retaining mutable producer resources
+  ---
+  duration_ms: 0.497167
+  type: 'test'
+  ...
+# Subtest: HTTP errors retain only finite codes and a 401 clears the remembered CSRF token
+ok 19 - HTTP errors retain only finite codes and a 401 clears the remembered CSRF token
+  ---
+  duration_ms: 0.193541
+  type: 'test'
+  ...
+# Subtest: caller aborts and network errors never retry or expose thrown private detail
+ok 20 - caller aborts and network errors never retry or expose thrown private detail
+  ---
+  duration_ms: 0.810459
+  type: 'test'
+  ...
+# Subtest: a referenced 30-second deadline aborts a pending fetch and settles with a fixed error
+ok 21 - a referenced 30-second deadline aborts a pending fetch and settles with a fixed error
+  ---
+  duration_ms: 0.803
+  type: 'test'
+  ...
+# Subtest: malformed JSON, invalid UTF8, extra envelope fields and byte-limit breaches fail visibly
+ok 22 - malformed JSON, invalid UTF8, extra envelope fields and byte-limit breaches fail visibly
+  ---
+  duration_ms: 0.903416
+  type: 'test'
+  ...
+# Subtest: anonymous and unavailable sessions never invent groups or issue private reads
+ok 23 - anonymous and unavailable sessions never invent groups or issue private reads
+  ---
+  duration_ms: 1.427583
+  type: 'test'
+  ...
+# Subtest: an uncertain prediction retry keeps its identity and claims success only after acknowledgement
+ok 24 - an uncertain prediction retry keeps its identity and claims success only after acknowledgement
+  ---
+  duration_ms: 1.104333
+  type: 'test'
+  ...
+# Subtest: changed prediction intent gets a new identity after an uncertain response
+ok 25 - changed prediction intent gets a new identity after an uncertain response
+  ---
+  duration_ms: 0.842
+  type: 'test'
+  ...
+# Subtest: a prediction conflict preserves the draft and requires explicit base review before another save
+ok 26 - a prediction conflict preserves the draft and requires explicit base review before another save
+  ---
+  duration_ms: 0.494875
+  type: 'test'
+  ...
+# Subtest: a newer resource refresh cannot silently accept an outdated conflict comparison
+ok 27 - a newer resource refresh cannot silently accept an outdated conflict comparison
+  ---
+  duration_ms: 0.356541
+  type: 'test'
+  ...
+# Subtest: Oracle retries bind the whole detached selection and conflicts keep their original base
+ok 28 - Oracle retries bind the whole detached selection and conflicts keep their original base
+  ---
+  duration_ms: 0.827084
+  type: 'test'
+  ...
+# Subtest: late group reads and leave acknowledgements cannot replace the selected group or its draft scope
+ok 29 - late group reads and leave acknowledgements cannot replace the selected group or its draft scope
+  ---
+  duration_ms: 0.620792
+  type: 'test'
+  ...
+# Subtest: out-of-order same-group resource reads keep the newest snapshot
+ok 30 - out-of-order same-group resource reads keep the newest snapshot
+  ---
+  duration_ms: 0.263417
+  type: 'test'
+  ...
+# Subtest: navigation away from a pending resource prevents late data and a stuck loading state
+ok 31 - navigation away from a pending resource prevents late data and a stuck loading state
+  ---
+  duration_ms: 0.23025
+  type: 'test'
+  ...
+# Subtest: a changed response viewer clears private state and ignores an older mutation acknowledgement
+ok 32 - a changed response viewer clears private state and ignores an older mutation acknowledgement
+  ---
+  duration_ms: 0.526208
+  type: 'test'
+  ...
+# Subtest: restarting as another viewer prevents an old acknowledgement from clearing their pending draft
+ok 33 - restarting as another viewer prevents an old acknowledgement from clearing their pending draft
+  ---
+  duration_ms: 0.372166
+  type: 'test'
+  ...
+# Subtest: writes use the current server resource and active permission instead of the browser clock
+ok 34 - writes use the current server resource and active permission instead of the browser clock
+  ---
+  duration_ms: 0.918583
+  type: 'test'
+  ...
+# Subtest: history is never requested while hidden and an older read cannot outlive a new visibility gate
+ok 35 - history is never requested while hidden and an older read cannot outlive a new visibility gate
+  ---
+  duration_ms: 0.365708
+  type: 'test'
+  ...
+# Subtest: acknowledging older prediction and Oracle submissions preserves newer unsent values
+ok 36 - acknowledging older prediction and Oracle submissions preserves newer unsent values
+  ---
+  duration_ms: 0.409041
+  type: 'test'
+  ...
+# Subtest: invitation retries preserve identity and expose a private code only from its acknowledged receipt
+ok 37 - invitation retries preserve identity and expose a private code only from its acknowledged receipt
+  ---
+  duration_ms: 0.478625
+  type: 'test'
+  ...
+# Subtest: a group access failure removes its private view and previously loaded history
+ok 38 - a group access failure removes its private view and previously loaded history
+  ---
+  duration_ms: 0.288959
+  type: 'test'
+  ...
+1..38
+# tests 38
+# suites 0
+# pass 38
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 192.782125

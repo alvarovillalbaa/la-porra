@@ -1,6 +1,7 @@
 # Application client source
 
-Date: 2026-10-28. Status: authored source and static checks only.
+Date: 2026-10-28. Status: published client source; static checks and 38 approved
+API/controller cases passed. No browser or shared-service acceptance claimed.
 
 ## Implemented client
 
@@ -48,12 +49,43 @@ process as final verification; the machine-local executable path is not committe
   not rerun, and their prior result is not claimed for the new client.
 - The [client check proposal](../../../proposals/application-checks.md) scopes
   exactly 38 authored cases: 22 API/protocol and 16 state-controller cases.
-  **All 38 remain unexecuted pending separate approval.**
+  These were initially unexecuted, then passed under Alvaro's separate approval
+  as recorded below.
 
 Independent source review found and prompted fixes for stale acknowledgements,
 resource/history ownership, full-context changes, leave-after-navigation,
 terminal session-change notification and loading-state ownership. This review
 does not establish runtime or browser acceptance.
+
+## Publication and approved focused execution
+
+The client, its complete producer contract and both proposals were published in
+[`7516c13c030f12e027f5b5844ffdba95a13afee2`](https://github.com/alvarovillalbaa/la-porra/commit/7516c13c030f12e027f5b5844ffdba95a13afee2).
+The GitHub branch readback matched that commit, and all 38 remote file entries
+(path, mode and blob SHA) matched the local committed tree. The other 18
+existing blobs were preserved, including all nine closed domain receipt hashes.
+
+Alvaro then approved exactly the two proposed test files. One local run used
+the existing Node `v24.21.0` installation: **38 tests passed**, zero failed,
+cancelled, skipped or TODO, with no retry. Both test files and the three imported
+client modules matched their pre-run SHA256 values afterward.
+
+The [machine receipt](application-checks.json) records the source commit,
+runtime, command, timestamps, five source hashes and exact totals. The retained
+[TAP output](application-checks.tap) is 9,236 bytes with SHA256
+`25457b1ae14bed6e35e372364785526f4a62f39e96814f7556405303cc574d1d`;
+stderr was empty. The runner selected only the two approved files. It did not
+execute the earlier domain glob or any browser, server, database, provider,
+real account, installation, build or CI job.
+Independent read-only review confirmed 38 unique case names in source order,
+the five source/commit hashes, TAP hash/totals and absence of private paths or
+raw fixture credentials in retained output; it did not rerun the checks.
+
+These passes establish the authored API/controller fixture cases at that source.
+They do not mount the DOM views or prove form/focus/clipboard, responsive UI,
+verified live sessions, persisted idempotency, membership privacy, time/reveal
+enforcement or shared multiplayer behavior. This closure changes documentation
+and result evidence only; the tested production and test source is unchanged.
 
 ## Remaining work
 

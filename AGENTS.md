@@ -22,8 +22,9 @@
   workspace approval. No database or Auth integration is currently approved.
 - Use `apply_patch`. Source syntax/import checks and `git diff --check` are safe.
   Do not run backend/domain tests, browser checks, builds or servers without
-  explicit approval. The core 119 checks already passed; new client checks remain
-  unrun under `docs/proposals/application-checks.md` until separately approved.
+  explicit approval. The core 119 and application 38 checks passed under their
+  separate approved scopes; see `docs/proposals/application-checks.md`. Do not
+  extend that approval to backend integration, browsers or a broader suite.
 - Personal GitHub source publication is authorized by the all-project goal.
   No model call, paid plan, new account, domain purchase or live data import is
   authorized by this foundation. Record evidence under the owning `docs/`.

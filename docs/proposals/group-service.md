@@ -147,6 +147,6 @@ service: account entry, group creation, explicit code copy, another account's
 redemption, roster reload, permission-dependent controls and explicit revoke/leave
 confirmation. Use owned disposable accounts/content and remove only those
 fixtures under the approved cleanup policy. Request that browser scope before
-execution. Neither the [38 proposed source checks](application-checks.md) nor
+execution. Neither the [38 passing source checks](application-checks.md) nor
 this proposal proves real sessions, multiplayer privacy, persistence or hosted
 acceptance.
