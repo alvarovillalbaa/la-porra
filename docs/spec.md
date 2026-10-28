@@ -38,12 +38,12 @@ requires both reveal times explicitly and has no implicit visibility default.
 | Hide picks until kickoff | Separate reveal predicate; private queries/RLS and browser acceptance remain |
 | Revision history visible after the match, last edit timestamp | Append-only revision contract; database/API/UI remain |
 | Freeze closure across data outages/schedule changes | Stored cutoff and closure-latch predicate; transactional persistence remains |
-| Score precedence 5/3/2/1/0 | Draft source and authored, unexecuted cases |
+| Score precedence 5/3/2/1/0 | Draft source; 46 approved match-scoring cases passed across precedence, factors, bonuses and policies |
 | Round factors ×1, ×1.5, ×2, ×3 | Half-point integer scoring source; no rounded quarterfinal totals |
-| Qualification bonuses +3, final +5; never multiplied | Draft source and authored, unexecuted cases |
+| Qualification bonuses +3, final +5; never multiplied | Draft source; focused scoring checks passed |
 | Third-place bonus | Requires explicit `winner` or `none`; source says qualified although nobody advances |
 | Oráculo before first match | Explicit deadline contract; midnight-local versus opening-minus-60-minutes decision remains |
-| Champion20, runner-up12, semifinalists1each, scorer15, MVP12, goalkeeper10, young-player8 | Draft pure Oráculo records/settlement/scoring source prepared; official records, submission and service integration remain |
+| Champion20, runner-up12, semifinalists1each, scorer15, MVP12, goalkeeper10, young-player8 | Draft pure records/settlement/scoring with 55 approved Oráculo cases passed; official records, submission and service integration remain |
 | Cinderella10 | Pot-four snapshot, full stage/points/GD/goals/pre-tournament-rank ordering and explicit tied-winner policy in draft source; authoritative snapshots and policy activation remain |
 | Pufo | Draft source requires explicit fixed10 or stage10/7/5/3 policy and same-stage/tie treatment; owner selection and activation remain unresolved |
 | Worst goal difference8 / worst group team | Draft source supports explicit whole-tournament or group-only GD scope with preserved ties; scope choice and category identity remain unresolved |
@@ -74,6 +74,9 @@ decision, not silently enforced by this draft scorer.
 The separate `research-2026-oracle-v1` [Oráculo engine contract](references/oracle-contract.md)
 keeps missing results and missing policy choices unsettled. Supplying one of its
 draft interpretations to a pure function does not approve an active rulebook.
+The [approved 119-case domain run](results/2026/10-28/oracle-source.md) supplies
+bounded runtime evidence; it does not activate these policies or establish the
+remaining application/service requirements.
 
 Completion requires the full app contract, real shared persistence, server-side
 time/visibility enforcement, published source and hosted behavior. Syntax or

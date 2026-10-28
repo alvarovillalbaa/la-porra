@@ -1,7 +1,8 @@
 # Draft Oráculo implementation
 
 28 October 2026. Substantive domain source toward the full La Porra application;
-runtime behavior and end-to-end service acceptance remain unverified.
+all 119 approved pure-domain checks passed. End-to-end service acceptance remains
+unverified.
 
 ## Source and scope
 
@@ -35,22 +36,23 @@ bound scores without accumulating prior points. Database replacement, audit
 retention, verified provenance and all access/reveal enforcement remain service
 requirements. See the [record contract](../../../references/oracle-contract.md).
 
-## Verification performed
+## Initial source preparation
 
 Node `v24.21.0` recorded its version and executable in the same repository shell,
 then used that exact executable to run the existing `scripts/check.mjs` checker.
 It passed ES-module syntax for source, authored tests and scripts, package JSON
-and required documents. No domain module was imported and no domain function or
-test was executed.
+and required documents. During that preparation, no domain module was imported
+and no domain function or test was executed.
 The two subsequently added regression cases also passed `node --check` parsing.
 Local import targets, new-file whitespace and `git diff --check` passed.
 
 There are **55 new authored Oráculo cases**, plus the unchanged **64 existing
 match/window/ranking cases**. The new count derives from 40 source declarations
-with three literal-array loops expanded to ten, four and four cases: 55. This is
-source counting, not 119 passing tests. The [execution proposal](../../../proposals/core-checks.md)
-requires explicit owner approval under the supplied AGENTS.md §7; neither the
-earlier 64-case scope nor this larger scope has been executed.
+with three literal-array loops expanded to ten, four and four cases: 55. At
+preparation this was source counting, not passing-test evidence. The
+[execution proposal](../../../proposals/core-checks.md) required explicit owner
+approval under the supplied AGENTS.md §7; execution subsequently occurred as
+recorded below.
 
 The new cases cover every category, official award ties, semifinalist set
 scoring, pot eligibility, the Cinderella ordering chain, explicit Pufo modes
@@ -62,8 +64,8 @@ not a real team, player, tournament or official result.
 Independent read-only review checked the fixture arithmetic, rule ordering,
 cohorts, revision bindings and incomplete/final distinction. It requested two
 additional regression cases: unpicked but unsettled categories, and Pufo
-worst-only allocation at distinct exit stages. Both were authored and parsed;
-they were not run. Source review is not runtime or assertion proof.
+worst-only allocation at distinct exit stages. Both were authored and parsed
+before approval. Source review alone was not runtime or assertion proof.
 
 | Frozen source | SHA-256 |
 | --- | --- |
@@ -88,6 +90,44 @@ GitHub reads matched all nine changed local Git blobs. The canonical module is
 as `5fdb90d59ae5b3dcee1fab20f730c0db499d0f4c`. This receipt-only follow-up
 preserves every source/test byte. Publication does not establish test execution,
 an active rulebook, shared persistence or a hosted application.
+
+## Approved domain execution
+
+Alvaro explicitly answered **“Approve La Porra’s 119 checks”** for the immutable
+[proposal at `928a10d`](https://github.com/alvarovillalbaa/la-porra/blob/928a10d01dec5cdc41f418c38d24ba74dea004d3/docs/proposals/core-checks.md).
+Before execution, local HEAD matched that exact source and the checkout was
+clean. The test inventory contained only the four approved `.test.mjs` files.
+The existing Node `v24.21.0` process recorded its executable, then launched that
+same executable with `--test` over those files and the TAP reporter. No package
+installation or additional environment was needed.
+
+**119 tests passed, zero failures/cancellations/skips/TODOs; exit code 0.**
+
+| Test file | Passing cases |
+| --- | ---: |
+| `tests/oracle.test.mjs` | 55 |
+| `tests/scoring.test.mjs` | 46 |
+| `tests/windows.test.mjs` | 12 |
+| `tests/ranking.test.mjs` | 6 |
+
+The [machine-readable report](domain-checks.json) records the exact source
+commit, Node version, runner arguments, totals and SHA-256 of all four modules,
+four test files and the authored fixture helper. Every source/test hash matches
+the approved published bytes. This is execution of actual pure domain code
+against T2 abstract fixtures; no official data, server, browser, database, CI,
+model call or provider was involved. No implementation/test change was required.
+
+Independent evidence review confirmed all 119 sequential TAP pass records and
+the complete plan, no failure/skip/TODO directives or bailouts, empty stderr,
+and every recorded hash against both the worktree and immutable checked commit.
+The bounded JSON retains the 22,792-byte TAP output's SHA-256. The task-owned
+temporary TAP/stderr files were then removed; no fixture data or environment
+remains to tear down.
+
+These results close the domain-execution gate for this scope. They do not prove
+official result verification, database idempotency, access/privacy enforcement,
+real server cutoffs, application behavior or a live competition. Those remain
+separate requirements below.
 
 ## Remaining application work
 

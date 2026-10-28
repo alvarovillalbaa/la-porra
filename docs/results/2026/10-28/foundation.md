@@ -82,3 +82,9 @@ approval question was presented against the published proposal; it remains
 pending. Tournament choice and the owner's Oráculo preference remain pending.
 No active workflow, Vercel project or database was created. Application and live
 backend/hosted verification remain required under the full product contract.
+
+Subsequently, the Oráculo domain implementation expanded the proposed scope to
+119 cases. Alvaro explicitly approved that scope and all 119 passed at source
+`928a10d01dec5cdc41f418c38d24ba74dea004d3`. The [current owning receipt](oracle-source.md)
+records the exact execution and preserves the remaining application gates. The
+unexecuted statements above describe this initial foundation's preparation.

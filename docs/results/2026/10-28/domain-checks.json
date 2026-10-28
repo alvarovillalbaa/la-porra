@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-28",
+  "scope": "119 authored local domain checks approved by Alvaro",
+  "sourceCommit": "928a10d01dec5cdc41f418c38d24ba74dea004d3",
+  "nodeVersion": "v24.21.0",
+  "command": "node --test tests/*.test.mjs",
+  "dataTier": "T2 authored abstract fixtures",
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "totals": {
+    "tests": 119,
+    "suites": 0,
+    "pass": 119,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "sha256": {
+    "src/oracle.mjs": "1b0bb6f3b54823bf4fa0b13bd1868f0f31aa781224112f58119de64754dd750f",
+    "src/ranking.mjs": "559d7d4ecb2bc3eb6f4117a3e68b07e3f63273b10b6f541ebe6f45336ae94fb2",
+    "src/scoring.mjs": "45c113a892ed2a526611549f8ae2a915594aec39f3811c6bfaf70181d617b9e9",
+    "src/windows.mjs": "bd7a944577bae5d2117e9d17f5f6310c5619e268dd2469fd302c312f8165e43a",
+    "tests/oracle-fixtures.mjs": "7b88634807ce5b80841d6913bbacff5659c1f0223e959cdab313082ee75985f7",
+    "tests/oracle.test.mjs": "facbc494df99b4dc3b0832f4c8bf07dbe4e9e0f204cbbe9806e393c78b1ca8a7",
+    "tests/ranking.test.mjs": "be32cbacd4f82a586f9f9a604efb97f0b5cbfc534784a3cd54c6c42ff7e321f4",
+    "tests/scoring.test.mjs": "5d75cc47fe87179bd28a5085b88fad9091602aad899c8a9c7d868a755563a1ae",
+    "tests/windows.test.mjs": "204700cf547a088ccd36ea0da8ee965c008a127cdeb9a5743773a2b0c6a0cbfe"
+  },
+  "runnerArguments": [
+    "--test",
+    "--test-reporter=tap",
+    "tests/oracle.test.mjs",
+    "tests/ranking.test.mjs",
+    "tests/scoring.test.mjs",
+    "tests/windows.test.mjs"
+  ],
+  "tapEvidence": {
+    "sha256": "6df6dec48a03d556b887f5972a2bc086d1cf83fb267edde954eec87f1f198781",
+    "bytes": 22792,
+    "passingTestRecords": 119,
+    "plan": 119,
+    "stderrBytes": 0
+  }
+}
