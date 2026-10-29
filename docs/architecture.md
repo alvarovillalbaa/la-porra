@@ -1,6 +1,6 @@
 # Ownership and proposed data contract
 
-Last updated: 2026-10-28
+Last updated: 2026-10-29
 
 Current implementation includes pure domain source and the dependency-free
 browser client in `public/`. The following shared-service contract remains
@@ -57,6 +57,20 @@ half-point total and shared competition rank. Equal points share rank; ID order
 only stabilizes display. The caller must exclude hidden/unsettled records and
 authorize group membership before returning rows. Ranking source alone does not
 establish privacy.
+
+`aggregateExactScoreHits` consumes one explicit member cohort and selected
+prediction/result revisions in a single group/tournament/mode/draft-ruleset
+scope. It counts exact scores through the canonical scorer, independently of
+qualifier bonuses or round multipliers, and returns count-ranked rows plus
+internal selection provenance. A correction rebuilds the selection instead of
+adding to a previous count. See the [exact-hit contract](references/exact-hit-ranking.md).
+
+The service must choose accepted revisions and the allowed settled subset,
+enforce membership/reveal gates, keep provenance internally and project only
+the public count rows with authorized display names. The optional browser card
+shares the points table's complete member cohort and existing filter/context;
+it has its own computation timestamp. Neither the pure module nor the client
+proves completeness, official facts, latest records or safe disclosure.
 
 `resolveOracleOutcomes` and `scoreOraclePrediction` implement the draft
 [Oráculo record contract](references/oracle-contract.md). They validate supplied

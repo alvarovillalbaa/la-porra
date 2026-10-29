@@ -25,6 +25,8 @@
   explicit approval. The core 119 and application 38 checks passed under their
   separate approved scopes; see `docs/proposals/application-checks.md`. Do not
   extend that approval to backend integration, browsers or a broader suite.
+  The 46 new exact-hit cases and proposed 203-case combined run remain
+  unexecuted pending their own approval: `docs/proposals/exact-hit-checks.md`.
 - Personal GitHub source publication is authorized by the all-project goal.
   No model call, paid plan, new account, domain purchase or live data import is
   authorized by this foundation. Record evidence under the owning `docs/`.

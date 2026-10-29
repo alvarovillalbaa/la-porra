@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-29",
+  "status": "source-prepared-tests-unexecuted",
+  "baselineCommit": "d475055662cff2b2a159b2742c45240a3dfc3b05",
+  "feature": "Draft exact-score selected-settlement leaderboard",
+  "approvalRequired": "Repository AGENTS.md and supplied workspace instructions section 7",
+  "testScope": {
+    "expectedCases": 203,
+    "newCases": 46,
+    "regressionCases": 157,
+    "nodeVersion": "v24.21.0",
+    "runnerArguments": [
+      "--test",
+      "--test-concurrency=1",
+      "--test-timeout=10000",
+      "tests/scoring.test.mjs",
+      "tests/windows.test.mjs",
+      "tests/ranking.test.mjs",
+      "tests/oracle.test.mjs",
+      "tests/unit/application-api.test.mjs",
+      "tests/unit/application-state.test.mjs",
+      "tests/unit/exact-hit-ranking.test.mjs",
+      "tests/unit/exact-hit-protocol.test.mjs",
+      "tests/unit/exact-hit-view.test.mjs"
+    ],
+    "files": [
+      {
+        "path": "tests/scoring.test.mjs",
+        "expectedCases": 46,
+        "kind": "unchanged-regression"
+      },
+      {
+        "path": "tests/windows.test.mjs",
+        "expectedCases": 12,
+        "kind": "unchanged-regression"
+      },
+      {
+        "path": "tests/ranking.test.mjs",
+        "expectedCases": 6,
+        "kind": "unchanged-regression"
+      },
+      {
+        "path": "tests/oracle.test.mjs",
+        "expectedCases": 55,
+        "kind": "unchanged-regression"
+      },
+      {
+        "path": "tests/unit/application-api.test.mjs",
+        "expectedCases": 22,
+        "kind": "unchanged-regression"
+      },
+      {
+        "path": "tests/unit/application-state.test.mjs",
+        "expectedCases": 16,
+        "kind": "unchanged-regression"
+      },
+      {
+        "path": "tests/unit/exact-hit-ranking.test.mjs",
+        "expectedCases": 24,
+        "kind": "new-unexecuted",
+        "caseNames": [
+          "the versioned empty selection reports only its explicit empty scope and coverage",
+          "explicit roster members without selected settlements share zero without fabricated matches",
+          "exact home wins away wins draws and goalless draws each count one match",
+          "correct sign difference or draw category never substitutes for the complete exact score",
+          "a wrong independent knockout qualifier does not erase an exact score hit",
+          "equal fifteen-half-point totals distinguish an exact score from difference plus qualifier",
+          "each match counts once across all rounds regardless of multipliers and bonus policy",
+          "exact-count ties share competition rank despite different denominators and input order",
+          "a corrected selected result replaces the previous hit and preserves both snapshot identities",
+          "selecting a replacement prediction revision counts its current intent once",
+          "a shared selected result counts one distinct match and one prediction for each member",
+          "repeating the identical selected pair is rejected rather than counted or silently deduplicated",
+          "two revisions for one member and match cannot masquerade as a selected history",
+          "one prediction revision identity cannot be reused for a different member or match",
+          "one result revision identity cannot be rebound to a different match",
+          "members of one match must share a coherent selected result while absent and null qualifiers normalize",
+          "group tournament mode and ruleset bindings cannot cross a captured selection scope",
+          "draft version and explicit bronze policies remain validation inputs rather than activation",
+          "unknown prediction members and duplicate roster entries never fabricate membership",
+          "unverified unfinished or absent settlement flags are not counted as misses or zeros",
+          "strict data records dense arrays and unknown fields reject without invoking score accessors",
+          "ASCII identity and canonical score validation reject coercion while preserving safe boundaries",
+          "results are detached deeply frozen private-safe projections and inputs remain unchanged",
+          "explicit input budgets bound roster and settlement work without inventing tournament size"
+        ]
+      },
+      {
+        "path": "tests/unit/exact-hit-protocol.test.mjs",
+        "expectedCases": 14,
+        "kind": "new-unexecuted",
+        "caseNames": [
+          "legacy rankings omit the optional exact-hit field without changing their five required keys",
+          "explicit null exact-hit rankings remain null for every existing filter",
+          "exact-hit rows preserve producer order, shared ranks and counts independently from point ranks",
+          "the optional ranking field does not loosen required parent or other envelope records",
+          "exact-hit ranking containers require precisely nullable computedAt and dense rows data",
+          "exact-hit rows require all five fields and reject extra or malformed records",
+          "exact-hit counts are nonnegative safe integers bounded by settled matches",
+          "exact-hit member metadata and supplied ranks remain strictly typed and bounded",
+          "exact-hit computedAt accepts explicit null or UTC ISO timestamps without fallback",
+          "visible exact-hit rankings require the entire matching member cohort and display names",
+          "hidden parent rankings cannot expose exact-hit rows even when point rows are empty",
+          "Oráculo rankings reject every nonnull exact-hit extension including an empty hidden card",
+          "exact-hit aggregates do not admit private picks, result provenance or a second context",
+          "parsed exact-hit envelopes are detached and deeply frozen without changing input"
+        ]
+      },
+      {
+        "path": "tests/unit/exact-hit-view.test.mjs",
+        "expectedCases": 8,
+        "kind": "new-unexecuted",
+        "caseNames": [
+          "legacy missing and explicit null exact-hit data show unavailable without invented rows",
+          "provided empty exact-hit data has a distinct empty state and its own update time",
+          "genuine zero exact-hit counts render a participant row rather than unavailable or empty",
+          "exact-hit producer order ranks and equal-count ties remain unchanged",
+          "integer exact-hit statistics leave half-point totals and existing filter actions intact",
+          "hidden parent rankings render neither the exact-hit card nor supplied member details",
+          "Oráculo rankings exclude the exact-hit card regardless of an optional fixture payload",
+          "exact-hit names remain literal text with semantic table labels and no input mutation"
+        ]
+      }
+    ],
+    "executionStatus": "not-run"
+  },
+  "unchangedFromBaseline": [
+    "tests/scoring.test.mjs",
+    "tests/windows.test.mjs",
+    "tests/ranking.test.mjs",
+    "tests/oracle.test.mjs",
+    "tests/unit/application-api.test.mjs",
+    "tests/unit/application-state.test.mjs",
+    "tests/oracle-fixtures.mjs",
+    "src/scoring.mjs",
+    "src/ranking.mjs",
+    "public/src/api.mjs",
+    "public/src/workspace.mjs"
+  ],
+  "staticChecks": {
+    "moduleSyntaxCount": 24,
+    "relativeImportsResolved": 28,
+    "productImportsExecuted": 0,
+    "testsExecuted": 0,
+    "caseInventory": "Literal declarations plus six inspected core table loops; no code evaluation"
+  },
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "e1ffdcec1bd77b6f0e4539356fb7c0d8f2eaf188083c21522e3b981c4cd3e76a"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "5514afb84b7d0fb9a4724cfa43e475666401ea084180d9e1b5d185dd2346f52f"
+    },
+    {
+      "path": "README.md",
+      "sha256": "21927f5a92dcf29071f8ba5c1a4a7c19608ce288b97be3b5c6433ae5dab6037d"
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "8adfb882f355e33cd73e0909c3f398b08a459f779d00fbf3857639bbfdac647f"
+    },
+    {
+      "path": "docs/proposals/exact-hit-checks.md",
+      "sha256": "1d50fcb6417a3d3d13e0ac5af821956c3d2f9fdfe519802b95157967eab47b85"
+    },
+    {
+      "path": "docs/references/application-api.md",
+      "sha256": "d3c99e24d20a7cc0688072d159ed5e4e39f6aab6c0bdeee51f88bd2a1464c9d6"
+    },
+    {
+      "path": "docs/references/exact-hit-ranking.md",
+      "sha256": "b508f61cb89aa98dc808b3bd49a638e79c0bbbfd5fa2375b1985d4ad89ec712e"
+    },
+    {
+      "path": "docs/spec.md",
+      "sha256": "248fd89f13d9b13c7522f6369e2ae0a0a1a65563037a55eb43fe1b6f64c1cc80"
+    },
+    {
+      "path": "package.json",
+      "sha256": "0bf1e422385ed999e25bb68c8149d5dcdebb06be1474fcaf50fd67d3bfc61a12"
+    },
+    {
+      "path": "public/index.html",
+      "sha256": "2d9cf8ebe22ce8b30b07a59da7e6a2b02595349350d4b27b7fde3f7affea7653"
+    },
+    {
+      "path": "public/src/api.mjs",
+      "sha256": "56964f4a6cbd15cddc746979af32598fb7bd22fe5c3fdc72a8d1c6f64fcc2f2b"
+    },
+    {
+      "path": "public/src/app.mjs",
+      "sha256": "9c73baad9a65916097cf75fceefcec92d74f48c2a0add87c4a34f3bdd7db5f8c"
+    },
+    {
+      "path": "public/src/groups.mjs",
+      "sha256": "4726de07c71a972a79f1d2392b779a238995d7d94911515a39f527bfed24f6b9"
+    },
+    {
+      "path": "public/src/predictions.mjs",
+      "sha256": "16a20e275701dbba399e8c20ef9fa8402556859a145dec868d8ca8be680f182d"
+    },
+    {
+      "path": "public/src/protocol.mjs",
+      "sha256": "395e168a753184b0390249014a8502d2750f2a1d8d9e58ee75fe26580b7e5a5d"
+    },
+    {
+      "path": "public/src/ui.mjs",
+      "sha256": "239e1815f4d1b1edc99442f24876cce79a5a2b0b5c2263a8a32e54fc1fd12ed0"
+    },
+    {
+      "path": "public/src/workspace.mjs",
+      "sha256": "d17bf0c93d03157080ef054509ba6675b2bb2a015c1a50750430c9b76e9c376a"
+    },
+    {
+      "path": "public/styles.css",
+      "sha256": "2c2fa988e1616bc1173f565b73ddde8a3f43198bffac41dde6be2266e09a4c3b"
+    },
+    {
+      "path": "scripts/check.mjs",
+      "sha256": "5d9193193d78f7a7e084c777e1c9add45f358daf58696baf5ab90031fb8a7297"
+    },
+    {
+      "path": "src/exact-hits.mjs",
+      "sha256": "16805508ea7ab9047f1a009f26d7471ffa219d7d36eb3d587d230eb709af8ce2"
+    },
+    {
+      "path": "src/oracle.mjs",
+      "sha256": "1b0bb6f3b54823bf4fa0b13bd1868f0f31aa781224112f58119de64754dd750f"
+    },
+    {
+      "path": "src/ranking.mjs",
+      "sha256": "559d7d4ecb2bc3eb6f4117a3e68b07e3f63273b10b6f541ebe6f45336ae94fb2"
+    },
+    {
+      "path": "src/scoring.mjs",
+      "sha256": "45c113a892ed2a526611549f8ae2a915594aec39f3811c6bfaf70181d617b9e9"
+    },
+    {
+      "path": "src/windows.mjs",
+      "sha256": "bd7a944577bae5d2117e9d17f5f6310c5619e268dd2469fd302c312f8165e43a"
+    },
+    {
+      "path": "tests/helpers/authored-dom.mjs",
+      "sha256": "9340a0c9ae07443a6668db0e21611ef6b8f6b8cca4068f71090875c000f4cd6b"
+    },
+    {
+      "path": "tests/oracle-fixtures.mjs",
+      "sha256": "7b88634807ce5b80841d6913bbacff5659c1f0223e959cdab313082ee75985f7"
+    },
+    {
+      "path": "tests/oracle.test.mjs",
+      "sha256": "facbc494df99b4dc3b0832f4c8bf07dbe4e9e0f204cbbe9806e393c78b1ca8a7"
+    },
+    {
+      "path": "tests/ranking.test.mjs",
+      "sha256": "be32cbacd4f82a586f9f9a604efb97f0b5cbfc534784a3cd54c6c42ff7e321f4"
+    },
+    {
+      "path": "tests/scoring.test.mjs",
+      "sha256": "5d75cc47fe87179bd28a5085b88fad9091602aad899c8a9c7d868a755563a1ae"
+    },
+    {
+      "path": "tests/unit/application-api.test.mjs",
+      "sha256": "8c13dc922d44db3d5bf76360978ffe5f93d2cee46cfb73ba6daf7180dad65d3f"
+    },
+    {
+      "path": "tests/unit/application-state.test.mjs",
+      "sha256": "ad59ffc6addfb032318689849081b2fa76ecd386054cf7598bd82d9f96ccb2e0"
+    },
+    {
+      "path": "tests/unit/exact-hit-protocol.test.mjs",
+      "sha256": "87edf50826848f53680d8715d4639b6598487b1db81c78b1eb5d15b4fb50e92b"
+    },
+    {
+      "path": "tests/unit/exact-hit-ranking.test.mjs",
+      "sha256": "24de994c749e44db4ec8dc6b55b20b813f6c6a4e4eb54c99e868850ca1f84b2f"
+    },
+    {
+      "path": "tests/unit/exact-hit-view.test.mjs",
+      "sha256": "4926259593380ee1ba7807bf8c09aeef6d55a6ff19b533130876ac3054852f47"
+    },
+    {
+      "path": "tests/windows.test.mjs",
+      "sha256": "204700cf547a088ccd36ea0da8ee965c008a127cdeb9a5743773a2b0c6a0cbfe"
+    }
+  ],
+  "exclusions": [
+    "This generated fingerprint cannot hash itself.",
+    "Dated narrative receipts and later publication evidence are outside this source seal."
+  ],
+  "limits": [
+    "Caller selects accepted settled revisions; official facts/latest records/completeness are not established.",
+    "No service, Auth, database, active ruleset, browser, CI, build, deployment or provider/model execution."
+  ]
+}

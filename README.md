@@ -1,6 +1,6 @@
 # La Porra
 
-Last updated: 2026-10-28
+Last updated: 2026-10-29
 
 Pronósticos entre amigos, con puntos. Match scores, knockout picks, a tournament
 Oráculo and private group rankings.
@@ -34,16 +34,23 @@ trading and cash-out are excluded. Its 2026 rules remain a draft version.
   including the closed but unrevealed minute before kickoff. Oráculo picks and
   its ranking have separate reveal times; the service must enforce them.
 - `src/ranking.mjs`: settled group totals with shared ranks for equal points.
+- `src/exact-hits.mjs`: draft exact-score counts from an explicitly selected
+  settlement snapshot, with correction provenance and shared count ranks.
+  The client has a separate **Marcadores exactos** table; unavailable data is
+  distinct from a real zero. See the [exact-hit contract](docs/references/exact-hit-ranking.md).
 - `src/oracle.mjs`: all ten draft Oráculo categories, snapshot/cohort validation,
   official-resolution inputs, explicit ambiguous policies, partial settlement
   and revision-bound scoring. See the [record contract](docs/references/oracle-contract.md).
 - `tests/*.test.mjs`: 119 approved local domain checks passed against the published source;
   the [machine-readable result](docs/results/2026/10-28/domain-checks.json) records
   exact source hashes and totals.
-- `tests/unit/`: all **38 API/controller cases passed** on Node 24.21.0 under
+- `tests/unit/application-*.test.mjs`: all **38 API/controller cases passed** on Node 24.21.0 under
   their separately approved [focused scope](docs/proposals/application-checks.md).
   The [machine receipt](docs/results/2026/10-28/application-checks.json) records
   the exact source and output hashes. No browser or database proof is claimed.
+- The new **46 exact-hit cases remain unexecuted**. The proposed
+  [203-case focused run](docs/proposals/exact-hit-checks.md) combines them with
+  the original 157 regressions; those older passes do not verify this change.
 - [Architecture](docs/architecture.md): server ownership, storage and audit
   contract still to implement.
 
@@ -70,4 +77,6 @@ records the subsequent source work, approved 119-case run and remaining service
 acceptance boundaries.
 The [application source receipt](docs/results/2026/10-28/application-source.md)
 records the new client, static verification and remaining service gates.
+The [exact-hit source receipt](docs/results/2026/10-29/exact-hit-source.md)
+records the current change and its pending verification boundary.
 MIT licensed.

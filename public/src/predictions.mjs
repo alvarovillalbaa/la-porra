@@ -242,6 +242,23 @@ export function renderOracle({ context, oracle, draft, conflict, busy }, actions
     el('section', {}, el('h2', {}, 'El Oráculo de tus amigos'), oracleOthers(oracle)));
 }
 
+function renderExactHitRanking(rankings) {
+  if (rankings.visibility !== 'visible' || rankings.filter === 'oracle') return null;
+  const exact = rankings.exactHitRanking;
+  return el('section', { className: 'exact-hit-ranking' },
+    el('h2', {}, 'Marcadores exactos'),
+    el('p', { className: 'muted' }, 'Solo cuenta pronósticos con un resultado resuelto. Los empates comparten puesto.'),
+    exact == null ? notice('La clasificación de marcadores exactos todavía no está disponible.')
+      : [el('p', { className: 'muted' }, `Actualización de marcadores exactos: ${formatDate(exact.computedAt)}`),
+        exact.rows.length ? el('div', { className: 'table-scroll' }, el('table', { className: 'rankings-table' },
+          el('caption', {}, `Clasificación por marcadores exactos: ${FILTERS[rankings.filter]}`),
+          el('thead', {}, el('tr', {}, ['Puesto', 'Amigo', 'Marcadores exactos', 'Pronósticos resueltos'].map(label => el('th', { scope: 'col' }, label)))),
+          el('tbody', {}, exact.rows.map(row => el('tr', {},
+            el('td', {}, row.rank), el('th', { scope: 'row' }, row.displayName),
+            el('td', {}, row.exactHitCount), el('td', {}, row.settledMatchCount))))))
+          : emptyState('Sin participantes en esta clasificación', 'No hay participantes incluidos en este filtro.')]);
+}
+
 export function renderRankings({ context, rankings }, actions) {
   return el('section', { className: 'view' }, heading(context, 'Clasificación', 'Cada acierto cuenta. Los empates comparten puesto.'),
     el('div', { className: 'filter-tabs', role: 'group', 'aria-label': 'Filtrar clasificación' }, rankings.availableFilters.map(filter =>
@@ -254,7 +271,8 @@ export function renderRankings({ context, rankings }, actions) {
         el('tbody', {}, rankings.rows.map(row => el('tr', {},
           el('td', {}, row.rank), el('th', { scope: 'row' }, row.displayName), el('td', {}, formatPoints(row.pointsUnits)),
           el('td', {}, row.settledCount), el('td', {}, row.pendingCount))))))
-        : emptyState('La clasificación está por empezar', 'Cuando se publiquen los primeros resultados aparecerán aquí.'));
+        : emptyState('La clasificación está por empezar', 'Cuando se publiquen los primeros resultados aparecerán aquí.'),
+    renderExactHitRanking(rankings));
 }
 
 export function renderRules({ context }) {

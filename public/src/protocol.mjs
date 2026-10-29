@@ -177,8 +177,25 @@ export function parseOracle(value) {
   return { revisionId: nullable(input.revisionId, validateId), canEdit: boolean(input.canEdit), editReason: nullable(input.editReason, value => text(value, 500)),
     cutoffAt: nullable(input.cutoffAt, iso), pickVisibility, rankingVisibility: choice(input.rankingVisibility, ['hidden', 'visible']), categories, otherPicks };
 }
+function exactHitRanking(value, filter, visibility, pointRows) {
+  if (filter === 'oracle') fail();
+  const input = record(value, ['computedAt', 'rows']);
+  const rows = unique(array(input.rows).map(value => {
+    const row = record(value, ['memberId', 'displayName', 'rank', 'exactHitCount', 'settledMatchCount']);
+    const settledMatchCount = integer(row.settledMatchCount);
+    return { memberId: validateId(row.memberId), displayName: text(row.displayName), rank: integer(row.rank, 1),
+      exactHitCount: integer(row.exactHitCount, 0, settledMatchCount), settledMatchCount };
+  }), 'memberId');
+  if (visibility === 'hidden' && rows.length) fail();
+  if (visibility === 'visible') {
+    const members = new Map(pointRows.map(row => [row.memberId, row.displayName]));
+    if (rows.length !== pointRows.length || rows.some(row => members.get(row.memberId) !== row.displayName)) fail();
+  }
+  return { computedAt: nullable(input.computedAt, iso), rows };
+}
 function rankings(value, filter) {
-  const input = record(value, ['filter', 'availableFilters', 'visibility', 'computedAt', 'rows']);
+  const hasExactHitRanking = value !== null && typeof value === 'object' && Object.hasOwn(value, 'exactHitRanking');
+  const input = record(value, ['filter', 'availableFilters', 'visibility', 'computedAt', 'rows', ...(hasExactHitRanking ? ['exactHitRanking'] : [])]);
   if (input.filter !== filter) fail();
   const availableFilters = array(input.availableFilters, RANKING_FILTERS.length).map(value => choice(value, RANKING_FILTERS));
   if (new Set(availableFilters).size !== availableFilters.length || !availableFilters.includes(input.filter)) fail();
@@ -189,7 +206,9 @@ function rankings(value, filter) {
       settledCount: integer(row.settledCount), pendingCount: integer(row.pendingCount) };
   }), 'memberId');
   if (visibility === 'hidden' && rows.length) fail();
-  return { filter: choice(input.filter, RANKING_FILTERS), availableFilters, visibility, computedAt: nullable(input.computedAt, iso), rows };
+  const result = { filter: choice(input.filter, RANKING_FILTERS), availableFilters, visibility, computedAt: nullable(input.computedAt, iso), rows };
+  if (hasExactHitRanking) result.exactHitRanking = nullable(input.exactHitRanking, value => exactHitRanking(value, filter, visibility, rows));
+  return result;
 }
 function session(value) {
   if (!value || typeof value !== 'object') fail();

@@ -152,13 +152,37 @@ the API wrapper does not maintain a second resource cache.
 ```text
 Rankings = {filter,availableFilters:Filter[],visibility:'hidden'|'visible',
  computedAt:null|ISO,rows:[{memberId,displayName,rank,pointsUnits,
- settledCount,pendingCount}]}
+ settledCount,pendingCount}],exactHitRanking?:null|ExactHitRanking}
+ExactHitRanking = {computedAt:null|ISO,
+ rows:[{memberId,displayName,rank,exactHitCount,settledMatchCount}]}
 Filter = 'overall'|'matchday'|'group_stage'|'knockout'|'oracle'
 ```
 
 `pointsUnits` are safe integers in half-point units, formatted for Spanish
 display without recomputing scores. Ranks are supplied positive integers and
 preserve ties; no client tie-break is added. Hidden rankings require no rows.
+
+`exactHitRanking` is an optional extension for the four match-based filters.
+Omission remains omitted after parsing; explicit null remains null. Both mean
+unavailable, not zero. A supplied empty card is distinct from either unavailable
+data or a genuine zero-count member row. No route, filter or additional private
+pick request is introduced. `oracle` permits omission/null only.
+
+The producer supplies safe nonnegative integer counts, with
+`exactHitCount <= settledMatchCount`, positive ranks and its own explicit
+`computedAt` (nullable). Rows retain producer order/ranks. Visible exact-hit
+rows must contain the entire points-row member cohort with identical public
+display names; they may be independently sorted. Hidden parents cannot carry
+child member rows, and the renderer suppresses the card altogether. The child
+has no second context, raw picks, result/revision IDs or internal provenance.
+
+The [domain contract](exact-hit-ranking.md) counts supplied settled prediction
+pairs, not the full fixture catalogue, missing picks or pending matches. Its
+internal report must be authorized and projected by the future service before
+it becomes this DTO. Counts must never be inferred from half-point totals.
+The new parser accepts old envelopes, but older strict clients reject the new
+field; coordinate producer/client rollout before emitting it. Source tests
+cannot establish that coordination or backend disclosure enforcement.
 
 ## Prediction mutations
 

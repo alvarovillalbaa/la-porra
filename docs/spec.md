@@ -1,9 +1,9 @@
 # Product contract and delivery coverage
 
-Last updated: 2026-10-28
+Last updated: 2026-10-29
 
 Source: [La porra in Notion](https://app.notion.com/p/377a1ee8bd068023a883c8c6bf2434a1),
-fetched and read in full on 28 October 2026. The connector returns a snapshot
+fetched and read in full again on 29 October 2026. The connector returns a snapshot
 dated 14 June 2026, with the rules labelled research/proposals. This is the
 existing app brief under the active all-project GitHub/Vercel/Supabase goal.
 
@@ -49,7 +49,8 @@ requires both reveal times explicitly and has no implicit visibility default.
 | Worst goal difference8 / worst group team | Draft source supports explicit whole-tournament or group-only GD scope with preserved ties; scope choice and category identity remain unresolved |
 | Overall, matchday, group-stage, knockout and Oráculo rankings | Pure ranking source and server-owned filter/table UI authored; aggregation, correction/reveal enforcement and runtime acceptance remain |
 | Equal-point ranks | Current source shares competition rank; it does not award an extra competitive tie-break |
-| Streaks, exact hits, worst day and weekly comeback | Day/week boundaries and simultaneous-match ordering need explicit policy; implementation remains |
+| Most exact scores | Draft selected-settlement aggregation and separate count-ranked client table authored; 46 new cases await approval/execution, and shared producer/reveal enforcement remain |
+| Streaks, worst day and weekly comeback | Day/week boundaries and simultaneous-match ordering need explicit policy; implementation remains |
 | Brujo(3 exact in a row), Gafe(5 misses in a row) | Thresholds retained; ordered-event/badge implementation remains |
 | Copión frustrado, Antifútbol, Patriota roto, Oráculo badges | Definitions/thresholds remain incomplete; avoid invented awards |
 | FIFA as official result source | Provenance/version contract only; official data access, licensing and result ingestion remain |
@@ -83,6 +84,14 @@ records the subsequent browser client. Its separately approved 38 API/controller
 cases passed; no browser/server/database execution is implied. The proposed
 [first group-service slice](proposals/group-service.md) does not activate a
 tournament, a ruleset, Auth or schema changes.
+
+The [exact-hit contract](references/exact-hit-ranking.md) counts complete score
+matches independently of points and qualifier bonuses. It advances the brief's
+"más marcadores exactos" ranking without choosing day/week or streak ordering
+policies. Its selected subset is explicit; it does not claim a complete fixture
+catalogue, latest accepted revisions or pending-match counts. The proposed
+[203-case run](proposals/exact-hit-checks.md) is a new approval scope, not an
+extension of the two completed runs.
 
 Completion requires the full app contract, real shared persistence, server-side
 time/visibility enforcement, published source and hosted behavior. Syntax or
