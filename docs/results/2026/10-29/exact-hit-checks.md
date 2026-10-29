@@ -54,3 +54,9 @@ official-data/provider/model call, deployment or paid action occurred. Shared
 persistence, authoritative revision selection/membership/reveal enforcement,
 official facts, chosen tournament/ruleset and hosted acceptance remain open.
 The original full-app/portfolio goal is not complete.
+
+Results/status documentation were published at
+[`ae519aee0a3eacd32ff863c666b525b9a91d4774`](https://github.com/alvarovillalbaa/la-porra/commit/ae519aee0a3eacd32ff863c666b525b9a91d4774).
+Connected GitHub ref/tree readback matched all 52 file paths, modes, types and
+blob SHAs without truncation; the checkout was clean and no active workflow
+exists. This publication receipt changes no executed source or test input.
