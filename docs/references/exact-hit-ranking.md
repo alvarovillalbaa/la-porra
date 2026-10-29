@@ -1,6 +1,6 @@
 # Exact-score ranking contract
 
-29 October 2026. Implemented source, draft rules; runtime checks pending.
+29 October 2026. Implemented source, draft rules; all 203 approved focused checks passed.
 
 The brief's "más marcadores exactos" ranking is independent of points.
 [aggregateExactScoreHits](../../src/exact-hits.mjs) counts one hit when the
@@ -84,8 +84,8 @@ revision provenance. The separate Spanish card preserves those rows/ranks
 and distinguishes unavailable, empty and zero states. It is absent for hidden
 and Oráculo rankings. Existing five filters and half-point displays remain.
 
-The [46 authored new cases](../proposals/exact-hit-checks.md) cover domain,
-DTO and authored DOM behavior; none has executed yet. The DOM helper has no
+The [approved focused run](../results/2026/10-29/exact-hit-checks.md) passed all
+46 new domain/DTO/authored-DOM cases and 157 regressions. The DOM helper has no
 browser layout, focus, native form or accessibility engine. No service, Auth,
 database, official-data adapter, server disclosure enforcement or hosted
 application is implemented by this slice. Streaks/day/week/badges retain their

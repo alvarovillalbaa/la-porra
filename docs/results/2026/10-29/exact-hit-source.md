@@ -1,7 +1,8 @@
 # Exact-score leaderboard source receipt
 
-29 October 2026. Source implementation and static verification complete;
-**46 new cases and the combined 203-case run remain unexecuted**.
+29 October 2026. Source implementation and static verification complete.
+The subsequently approved [203-case run](exact-hit-checks.md) passed all cases.
+This receipt preserves the preparation/publication boundary before that run.
 
 ## Intent and boundary
 
@@ -52,16 +53,29 @@ relative Markdown links, the new JSON and tracked/new-file whitespace passed
 the final static checks. Remote identity is recorded after publication.
 
 The earlier 119/38 passing runs belong to their original pinned source; neither
-is reused as approval or runtime proof for this change. The new
-[proposal](../../../proposals/exact-hit-checks.md) requires an explicit §7 answer.
+was reused as approval or runtime proof for this change. The new
+[proposal](../../../proposals/exact-hit-checks.md) received a separate explicit
+§7 answer before the exact 203-case run; see its result receipt.
 
 ## Remaining work
 
-No tests, browser, server, database, dependency installation, CI, deployment,
-official-data import, real account, provider/model call or paid action ran for
-this slice. No schema/Auth policy or active tournament/ruleset was applied.
+Preparation used no runtime tests; the approved local Node run followed
+publication. No browser, server, database, dependency installation, CI,
+deployment, official-data import, real account, provider/model call or paid
+action ran for this slice. No schema/Auth policy or active tournament/ruleset was applied.
 The client remains unconnected; source publication is not a working hosted
 prediction service. Shared persistence, authoritative deadlines/reveal control,
 producer integration and hosted acceptance remain part of the original goal.
 Streaks/day/week/badge policy is still unresolved. No large local environment
 was created under the existing storage reserve constraint.
+
+## Publication
+
+Published source at
+[`9cf2fa622852bef9306121d9abe2f9b6fde90ee3`](https://github.com/alvarovillalbaa/la-porra/commit/9cf2fa622852bef9306121d9abe2f9b6fde90ee3)
+on personal public `main`. Connected GitHub ref/tree readback matched all
+**49 file paths, modes, types and blob SHAs**, with no truncation; there are no
+active workflow files. The checkout was clean. The exact 203-case approval
+request links that immutable proposal. This receipt-only follow-up changes no
+sealed runtime source or test. Execution was pending at that publication;
+the subsequent approved result and documentation updates are recorded separately.

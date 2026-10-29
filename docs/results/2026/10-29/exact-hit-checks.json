@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "9cf2fa622852bef9306121d9abe2f9b6fde90ee3",
+  "approval": {
+    "answer": "Approve La Porra’s 203 checks",
+    "proposalCommit": "9cf2fa622852bef9306121d9abe2f9b6fde90ee3",
+    "proposalPath": "docs/proposals/exact-hit-checks.md",
+    "scope": "Exactly 203 local Node cases: 46 new plus 157 regressions; nine files",
+    "toolQuestionId": "call_64d127fe158f4fbeb05fb905737ddcbc"
+  },
+  "startedAt": "2026-10-29T15:31:10.719Z",
+  "finishedAt": "2026-10-29T15:31:11.456Z",
+  "nodeVersion": "v24.21.0",
+  "nodeBinarySha256": "e4b5a3af0e05c75de2eae013904145f40fe7fc2a6e6f17510128bf45cca4e79b",
+  "runnerArguments": [
+    "--test",
+    "--test-concurrency=1",
+    "--test-timeout=10000",
+    "tests/scoring.test.mjs",
+    "tests/windows.test.mjs",
+    "tests/ranking.test.mjs",
+    "tests/oracle.test.mjs",
+    "tests/unit/application-api.test.mjs",
+    "tests/unit/application-state.test.mjs",
+    "tests/unit/exact-hit-ranking.test.mjs",
+    "tests/unit/exact-hit-protocol.test.mjs",
+    "tests/unit/exact-hit-view.test.mjs"
+  ],
+  "supervisorTimeoutMs": 120000,
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "totals": {
+    "tests": 203,
+    "suites": 0,
+    "pass": 203,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "sourceHashes": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "e1ffdcec1bd77b6f0e4539356fb7c0d8f2eaf188083c21522e3b981c4cd3e76a"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "5514afb84b7d0fb9a4724cfa43e475666401ea084180d9e1b5d185dd2346f52f"
+    },
+    {
+      "path": "README.md",
+      "sha256": "21927f5a92dcf29071f8ba5c1a4a7c19608ce288b97be3b5c6433ae5dab6037d"
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "8adfb882f355e33cd73e0909c3f398b08a459f779d00fbf3857639bbfdac647f"
+    },
+    {
+      "path": "docs/proposals/exact-hit-checks.md",
+      "sha256": "1d50fcb6417a3d3d13e0ac5af821956c3d2f9fdfe519802b95157967eab47b85"
+    },
+    {
+      "path": "docs/references/application-api.md",
+      "sha256": "d3c99e24d20a7cc0688072d159ed5e4e39f6aab6c0bdeee51f88bd2a1464c9d6"
+    },
+    {
+      "path": "docs/references/exact-hit-ranking.md",
+      "sha256": "b508f61cb89aa98dc808b3bd49a638e79c0bbbfd5fa2375b1985d4ad89ec712e"
+    },
+    {
+      "path": "docs/spec.md",
+      "sha256": "248fd89f13d9b13c7522f6369e2ae0a0a1a65563037a55eb43fe1b6f64c1cc80"
+    },
+    {
+      "path": "package.json",
+      "sha256": "0bf1e422385ed999e25bb68c8149d5dcdebb06be1474fcaf50fd67d3bfc61a12"
+    },
+    {
+      "path": "public/index.html",
+      "sha256": "2d9cf8ebe22ce8b30b07a59da7e6a2b02595349350d4b27b7fde3f7affea7653"
+    },
+    {
+      "path": "public/src/api.mjs",
+      "sha256": "56964f4a6cbd15cddc746979af32598fb7bd22fe5c3fdc72a8d1c6f64fcc2f2b"
+    },
+    {
+      "path": "public/src/app.mjs",
+      "sha256": "9c73baad9a65916097cf75fceefcec92d74f48c2a0add87c4a34f3bdd7db5f8c"
+    },
+    {
+      "path": "public/src/groups.mjs",
+      "sha256": "4726de07c71a972a79f1d2392b779a238995d7d94911515a39f527bfed24f6b9"
+    },
+    {
+      "path": "public/src/predictions.mjs",
+      "sha256": "16a20e275701dbba399e8c20ef9fa8402556859a145dec868d8ca8be680f182d"
+    },
+    {
+      "path": "public/src/protocol.mjs",
+      "sha256": "395e168a753184b0390249014a8502d2750f2a1d8d9e58ee75fe26580b7e5a5d"
+    },
+    {
+      "path": "public/src/ui.mjs",
+      "sha256": "239e1815f4d1b1edc99442f24876cce79a5a2b0b5c2263a8a32e54fc1fd12ed0"
+    },
+    {
+      "path": "public/src/workspace.mjs",
+      "sha256": "d17bf0c93d03157080ef054509ba6675b2bb2a015c1a50750430c9b76e9c376a"
+    },
+    {
+      "path": "public/styles.css",
+      "sha256": "2c2fa988e1616bc1173f565b73ddde8a3f43198bffac41dde6be2266e09a4c3b"
+    },
+    {
+      "path": "scripts/check.mjs",
+      "sha256": "5d9193193d78f7a7e084c777e1c9add45f358daf58696baf5ab90031fb8a7297"
+    },
+    {
+      "path": "src/exact-hits.mjs",
+      "sha256": "16805508ea7ab9047f1a009f26d7471ffa219d7d36eb3d587d230eb709af8ce2"
+    },
+    {
+      "path": "src/oracle.mjs",
+      "sha256": "1b0bb6f3b54823bf4fa0b13bd1868f0f31aa781224112f58119de64754dd750f"
+    },
+    {
+      "path": "src/ranking.mjs",
+      "sha256": "559d7d4ecb2bc3eb6f4117a3e68b07e3f63273b10b6f541ebe6f45336ae94fb2"
+    },
+    {
+      "path": "src/scoring.mjs",
+      "sha256": "45c113a892ed2a526611549f8ae2a915594aec39f3811c6bfaf70181d617b9e9"
+    },
+    {
+      "path": "src/windows.mjs",
+      "sha256": "bd7a944577bae5d2117e9d17f5f6310c5619e268dd2469fd302c312f8165e43a"
+    },
+    {
+      "path": "tests/helpers/authored-dom.mjs",
+      "sha256": "9340a0c9ae07443a6668db0e21611ef6b8f6b8cca4068f71090875c000f4cd6b"
+    },
+    {
+      "path": "tests/oracle-fixtures.mjs",
+      "sha256": "7b88634807ce5b80841d6913bbacff5659c1f0223e959cdab313082ee75985f7"
+    },
+    {
+      "path": "tests/oracle.test.mjs",
+      "sha256": "facbc494df99b4dc3b0832f4c8bf07dbe4e9e0f204cbbe9806e393c78b1ca8a7"
+    },
+    {
+      "path": "tests/ranking.test.mjs",
+      "sha256": "be32cbacd4f82a586f9f9a604efb97f0b5cbfc534784a3cd54c6c42ff7e321f4"
+    },
+    {
+      "path": "tests/scoring.test.mjs",
+      "sha256": "5d75cc47fe87179bd28a5085b88fad9091602aad899c8a9c7d868a755563a1ae"
+    },
+    {
+      "path": "tests/unit/application-api.test.mjs",
+      "sha256": "8c13dc922d44db3d5bf76360978ffe5f93d2cee46cfb73ba6daf7180dad65d3f"
+    },
+    {
+      "path": "tests/unit/application-state.test.mjs",
+      "sha256": "ad59ffc6addfb032318689849081b2fa76ecd386054cf7598bd82d9f96ccb2e0"
+    },
+    {
+      "path": "tests/unit/exact-hit-protocol.test.mjs",
+      "sha256": "87edf50826848f53680d8715d4639b6598487b1db81c78b1eb5d15b4fb50e92b"
+    },
+    {
+      "path": "tests/unit/exact-hit-ranking.test.mjs",
+      "sha256": "24de994c749e44db4ec8dc6b55b20b813f6c6a4e4eb54c99e868850ca1f84b2f"
+    },
+    {
+      "path": "tests/unit/exact-hit-view.test.mjs",
+      "sha256": "4926259593380ee1ba7807bf8c09aeef6d55a6ff19b533130876ac3054852f47"
+    },
+    {
+      "path": "tests/windows.test.mjs",
+      "sha256": "204700cf547a088ccd36ea0da8ee965c008a127cdeb9a5743773a2b0c6a0cbfe"
+    }
+  ],
+  "stdout": {
+    "path": "exact-hit-checks.stdout.txt",
+    "bytes": 17830,
+    "sha256": "51accd2f16e88dbb2246ad263438108f537b9246c9145b8a06a4e31667401e15",
+    "format": "Node spec reporter; raw bytes unchanged"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": ""
+  },
+  "data": "Authored fixture records, mocked transport/clocks and authored DOM only",
+  "limits": "No browser/server/database/install/CI/production/provider/model/paid action. No service acceptance.",
+  "caseNames": [
+    "all ten categories retain the draft version and original weights",
+    "settled champion exposes the exact matching award",
+    "settled runnerUp exposes the exact matching award",
+    "settled semifinalists exposes the exact matching award",
+    "settled goldenBoot exposes the exact matching award",
+    "settled goldenBall exposes the exact matching award",
+    "settled goldenGlove exposes the exact matching award",
+    "settled youngPlayer exposes the exact matching award",
+    "settled cinderella exposes the exact matching award",
+    "settled flop exposes the exact matching award",
+    "settled worstGoalDifference exposes the exact matching award",
+    "a result, pick and ruleset revision remain bound to the exact draw",
+    "a corrected official award replaces its prior score without accumulating it",
+    "omitted and explicitly null picks earn zero only for settled categories",
+    "semifinalist scoring counts unique correct teams rather than order",
+    "a shared official award credits one selection once",
+    "an unverified result leaves every category unsettled instead of final zero",
+    "missing or unverified goldenBoot prevents a final Oraculo total",
+    "missing or unverified goldenBall prevents a final Oraculo total",
+    "missing or unverified goldenGlove prevents a final Oraculo total",
+    "missing or unverified youngPlayer prevents a final Oraculo total",
+    "verified awards can settle while final team outcomes remain incomplete",
+    "missing ambiguous policies remain explicit instead of selecting draft rules",
+    "unpicked categories remain unsettled when results or policies are missing",
+    "Cinderella starts from pot four and prefers the furthest finish",
+    "Cinderella tie chain uses group points, total GD, total goals, then worse snapshot rank",
+    "an exact Cinderella tie retains both IDs only under the explicit all-winners policy",
+    "Pufo fixed mode uses the worst pot-one performance and never a pot-four team",
+    "Pufo same-finish order uses fewer group points, worse group GD, then fewer group goals",
+    "Pufo exact ties preserve both team IDs rather than using their display order",
+    "Pufo stage policy awards group its exact unmultiplied value",
+    "Pufo stage policy awards round_of_32 its exact unmultiplied value",
+    "Pufo stage policy awards round_of_16 its exact unmultiplied value",
+    "Pufo stage policy awards quarterfinal its exact unmultiplied value",
+    "Pufo stage allocation never invents an advantage for same-stage teams",
+    "stage Pufo worst-only resolves each exit stage instead of only the earliest one",
+    "worst goal difference uses the explicitly selected statistical scope",
+    "equal worst differences remain tied regardless of goals scored or team ID",
+    "input and returned records have no shared mutable references",
+    "every version and identity mismatch fails before producing a score",
+    "malformed scores, totals and rank snapshots are refused",
+    "unknown or duplicate snapshot, result and award identities are refused",
+    "unknown picks, wrong cohorts, duplicate semifinalists and contradictory finalists are refused",
+    "malformed policy values cannot activate a guessed interpretation",
+    "a complete final result rejects contradictory placement cardinality",
+    "missing eligible cohorts cannot create a settled zero category",
+    "a partial pick revision keeps its own identity without requiring all fields",
+    "record flags require booleans rather than client-like truthy values",
+    "identifiers must be normalized bounded strings",
+    "reordering input records cannot change any score or winning tie",
+    "invalid pots and player records cannot change cohort resolution",
+    "unknown award categories and result fields fail visibly",
+    "missing or malformed top-level records are rejected",
+    "record budgets reject oversized and sparse collections",
+    "accessor records are refused without executing a getter",
+    "settled half-point totals sort without rounding",
+    "equal totals share a rank without inventing competitive tie-breaks",
+    "input order and objects are preserved",
+    "empty groups have no fabricated ranking members",
+    "ranking output contains only the approved public fields",
+    "invalid totals and duplicate or unnormalized members are rejected",
+    "base-score precedence: exact home win",
+    "base-score precedence: exact away win",
+    "base-score precedence: exact draw",
+    "base-score precedence: exact goalless draw",
+    "base-score precedence: home winner and exact difference",
+    "base-score precedence: away winner and exact difference",
+    "base-score precedence: non-exact scoring draw",
+    "base-score precedence: non-exact goalless prediction",
+    "base-score precedence: home sign without the difference",
+    "base-score precedence: away sign without the difference",
+    "base-score precedence: home prediction misses away win",
+    "base-score precedence: away prediction misses home win",
+    "base-score precedence: home prediction misses draw",
+    "base-score precedence: away prediction misses draw",
+    "base-score precedence: draw prediction misses home win",
+    "base-score precedence: draw prediction misses away win",
+    "round score uses exact half-point units: group",
+    "round score uses exact half-point units: round_of_32",
+    "round score uses exact half-point units: round_of_16",
+    "round score uses exact half-point units: quarterfinal",
+    "round score uses exact half-point units: semifinal",
+    "round score uses exact half-point units: third_place",
+    "round score uses exact half-point units: final",
+    "qualifier bonus is independent of a missed score: round_of_32",
+    "qualifier bonus is independent of a missed score: round_of_16",
+    "qualifier bonus is independent of a missed score: quarterfinal",
+    "qualifier bonus is independent of a missed score: semifinal",
+    "qualifier bonus is independent of a missed score: third_place",
+    "qualifier bonus is independent of a missed score: final",
+    "rules remain explicitly labelled as research",
+    "an exact quarterfinal and qualifier total 10.5 points without rounding",
+    "the final multiplies score points but not its qualification bonus",
+    "third place requires an explicit winner-bonus or no-bonus choice",
+    "group qualifiers may be absent or null without earning a bonus",
+    "safe-integer goal boundaries retain exact winner differences",
+    "scoring does not mutate its inputs or nested records",
+    "non-record scoring inputs are rejected",
+    "unknown rounds and inherited property names are rejected",
+    "prediction and result must each be score records",
+    "every goal field rejects negative, fractional, non-number and unsafe values",
+    "group records reject qualification picks",
+    "ordinary knockouts and bronze winner bonuses require a home or away qualifier",
+    "bronze without a bonus accepts an omitted or null qualifier but validates supplied sides",
+    "third place cannot silently acquire a default bonus policy",
+    "unknown supplied third-place policies are rejected on every round",
+    "a valid third-place policy does not suppress other rounds qualification bonuses",
+    "session reads return the entire validated envelope with same-origin transport flags",
+    "session identity and login-path discriminants never fabricate a member",
+    "groups require every explicit permission and reject coercion or private anonymous envelopes",
+    "group reads enforce requested scope and keep invitation codes out of listings",
+    "tournament context stays explicit and cannot cross groups or default a missing tournament",
+    "match visibility rejects leaked hidden picks and visible-null producer fallbacks",
+    "match predictions validate bounded goals and qualifier team identity without scoring",
+    "history requires its current match and enforces scope, hidden emptiness and qualifier options",
+    "Oráculo reads retain incomplete own choices but validate all ten categories and option identities",
+    "Oráculo pick and ranking visibility are independent and hidden picks cannot leak",
+    "rankings enforce the requested filter and hide rows without recomputing supplied ties",
+    "mutations need an explicitly remembered valid CSRF token before any fetch",
+    "all mutation routes preserve method, identity, CSRF and full replay envelopes",
+    "mutation serializers reject spoofed ownership, invalid UUIDs and numeric coercion",
+    "prediction saves validate their supplied match without deciding its permission or local deadline",
+    "Oráculo submissions require every category and the producer option/cardinality bounds",
+    "prediction acknowledgements must match the detached submitted intent",
+    "successful DTOs are detached and frozen rather than retaining mutable producer resources",
+    "HTTP errors retain only finite codes and a 401 clears the remembered CSRF token",
+    "caller aborts and network errors never retry or expose thrown private detail",
+    "a referenced 30-second deadline aborts a pending fetch and settles with a fixed error",
+    "malformed JSON, invalid UTF8, extra envelope fields and byte-limit breaches fail visibly",
+    "anonymous and unavailable sessions never invent groups or issue private reads",
+    "an uncertain prediction retry keeps its identity and claims success only after acknowledgement",
+    "changed prediction intent gets a new identity after an uncertain response",
+    "a prediction conflict preserves the draft and requires explicit base review before another save",
+    "a newer resource refresh cannot silently accept an outdated conflict comparison",
+    "Oracle retries bind the whole detached selection and conflicts keep their original base",
+    "late group reads and leave acknowledgements cannot replace the selected group or its draft scope",
+    "out-of-order same-group resource reads keep the newest snapshot",
+    "navigation away from a pending resource prevents late data and a stuck loading state",
+    "a changed response viewer clears private state and ignores an older mutation acknowledgement",
+    "restarting as another viewer prevents an old acknowledgement from clearing their pending draft",
+    "writes use the current server resource and active permission instead of the browser clock",
+    "history is never requested while hidden and an older read cannot outlive a new visibility gate",
+    "acknowledging older prediction and Oracle submissions preserves newer unsent values",
+    "invitation retries preserve identity and expose a private code only from its acknowledged receipt",
+    "a group access failure removes its private view and previously loaded history",
+    "legacy rankings omit the optional exact-hit field without changing their five required keys",
+    "explicit null exact-hit rankings remain null for every existing filter",
+    "exact-hit rows preserve producer order, shared ranks and counts independently from point ranks",
+    "the optional ranking field does not loosen required parent or other envelope records",
+    "exact-hit ranking containers require precisely nullable computedAt and dense rows data",
+    "exact-hit rows require all five fields and reject extra or malformed records",
+    "exact-hit counts are nonnegative safe integers bounded by settled matches",
+    "exact-hit member metadata and supplied ranks remain strictly typed and bounded",
+    "exact-hit computedAt accepts explicit null or UTC ISO timestamps without fallback",
+    "visible exact-hit rankings require the entire matching member cohort and display names",
+    "hidden parent rankings cannot expose exact-hit rows even when point rows are empty",
+    "Oráculo rankings reject every nonnull exact-hit extension including an empty hidden card",
+    "exact-hit aggregates do not admit private picks, result provenance or a second context",
+    "parsed exact-hit envelopes are detached and deeply frozen without changing input",
+    "the versioned empty selection reports only its explicit empty scope and coverage",
+    "explicit roster members without selected settlements share zero without fabricated matches",
+    "exact home wins away wins draws and goalless draws each count one match",
+    "correct sign difference or draw category never substitutes for the complete exact score",
+    "a wrong independent knockout qualifier does not erase an exact score hit",
+    "equal fifteen-half-point totals distinguish an exact score from difference plus qualifier",
+    "each match counts once across all rounds regardless of multipliers and bonus policy",
+    "exact-count ties share competition rank despite different denominators and input order",
+    "a corrected selected result replaces the previous hit and preserves both snapshot identities",
+    "selecting a replacement prediction revision counts its current intent once",
+    "a shared selected result counts one distinct match and one prediction for each member",
+    "repeating the identical selected pair is rejected rather than counted or silently deduplicated",
+    "two revisions for one member and match cannot masquerade as a selected history",
+    "one prediction revision identity cannot be reused for a different member or match",
+    "one result revision identity cannot be rebound to a different match",
+    "members of one match must share a coherent selected result while absent and null qualifiers normalize",
+    "group tournament mode and ruleset bindings cannot cross a captured selection scope",
+    "draft version and explicit bronze policies remain validation inputs rather than activation",
+    "unknown prediction members and duplicate roster entries never fabricate membership",
+    "unverified unfinished or absent settlement flags are not counted as misses or zeros",
+    "strict data records dense arrays and unknown fields reject without invoking score accessors",
+    "ASCII identity and canonical score validation reject coercion while preserving safe boundaries",
+    "results are detached deeply frozen private-safe projections and inputs remain unchanged",
+    "explicit input budgets bound roster and settlement work without inventing tournament size",
+    "legacy missing and explicit null exact-hit data show unavailable without invented rows",
+    "provided empty exact-hit data has a distinct empty state and its own update time",
+    "genuine zero exact-hit counts render a participant row rather than unavailable or empty",
+    "exact-hit producer order ranks and equal-count ties remain unchanged",
+    "integer exact-hit statistics leave half-point totals and existing filter actions intact",
+    "hidden parent rankings render neither the exact-hit card nor supplied member details",
+    "Oráculo rankings exclude the exact-hit card regardless of an optional fixture payload",
+    "exact-hit names remain literal text with semantic table labels and no input mutation",
+    "the kickoff snapshot locks one minute before revealing picks",
+    "one millisecond before cutoff remains editable and hidden",
+    "the cutoff instant is closed but still hidden",
+    "the minute before kickoff never reveals another member’s pick",
+    "the kickoff instant reveals picks",
+    "a persisted closure latch cannot reopen during a timing correction",
+    "an earlier stored cutoff survives a later reveal time",
+    "unknown, invalid and ambiguous timing never silently allows edits",
+    "Oraculo picks may reveal at cutoff while its ranking stays hidden",
+    "Oraculo can keep both surfaces hidden until the selected end time",
+    "Oraculo never supplies an implicit deadline or reveal policy",
+    "evaluating a stored window preserves its input"
+  ],
+  "receiptValidation": {
+    "initial": {
+      "status": "rejected",
+      "supervisorExitCode": 1,
+      "reason": "Receipt parser expected TAP totals; Node defaulted to spec. Test subprocess exited 0; no test assertion failed."
+    },
+    "corrected": {
+      "status": "passed",
+      "summaries": {
+        "tests": 203,
+        "suites": 0,
+        "pass": 203,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "individualPassingCaseNames": 203,
+      "all46NewCaseNamesPresent": true,
+      "all35SealedHashesUnchanged": true,
+      "rawOutputDigestUnchanged": true
+    },
+    "testAttempts": 1,
+    "testReruns": 0
+  }
+}

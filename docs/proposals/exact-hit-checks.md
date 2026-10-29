@@ -1,6 +1,16 @@
 # Proposed exact-hit and regression checks
 
-29 October 2026. **Prepared; awaiting explicit approval. No new test has run.**
+29 October 2026. **Approved and executed: all 203 passed.**
+
+Alvaro approved this exact nine-file scope as "Approve La Porra’s 203 checks".
+One local Node 24.21.0 run against
+[`9cf2fa622852bef9306121d9abe2f9b6fde90ee3`](https://github.com/alvarovillalbaa/la-porra/commit/9cf2fa622852bef9306121d9abe2f9b6fde90ee3)
+passed 203/203, with no failed, cancelled, skipped or TODO cases and no rerun.
+The [result receipt](../results/2026/10-29/exact-hit-checks.md),
+[machine report](../results/2026/10-29/exact-hit-checks.json) and
+[raw output](../results/2026/10-29/exact-hit-checks.stdout.txt) preserve the run
+and a corrected reporter-format receipt error. The proposal below retains the
+approved boundary; additional cases/execution remain outside it.
 
 The completed 119 core and 38 application checks belong to their previously
 approved source snapshots. This proposal is a new, bounded 203-case scope for
@@ -37,7 +47,7 @@ transport/clocks and an authored minimal DOM; no real endpoint is contacted.
 One view case traverses the actual aggregation → public DTO validation → view
 functions with authored DOM primitives. It does not run Chromium or establish
 visual, touch, layout, focus or browser accessibility behavior. New case names,
-per-file counts and source SHA-256s are frozen in the
+per-file counts and pre-execution source SHA-256s are frozen in the
 [source fingerprint](../results/2026/10-29/exact-hit-source.json).
 
 ## Recording and repair boundary

@@ -48,9 +48,10 @@ trading and cash-out are excluded. Its 2026 rules remain a draft version.
   their separately approved [focused scope](docs/proposals/application-checks.md).
   The [machine receipt](docs/results/2026/10-28/application-checks.json) records
   the exact source and output hashes. No browser or database proof is claimed.
-- The new **46 exact-hit cases remain unexecuted**. The proposed
-  [203-case focused run](docs/proposals/exact-hit-checks.md) combines them with
-  the original 157 regressions; those older passes do not verify this change.
+- The separately approved **203-case focused run passed**, including all 46
+  new exact-hit cases and 157 regressions. The
+  [result receipt](docs/results/2026/10-29/exact-hit-checks.md) records the exact
+  source and raw output; authored DOM checks do not establish browser behavior.
 - [Architecture](docs/architecture.md): server ownership, storage and audit
   contract still to implement.
 
